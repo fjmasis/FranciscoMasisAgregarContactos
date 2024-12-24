@@ -3,12 +3,13 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Agregar Contacto</title>
+<head>
+    <title>Agregar Contactos</title>
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css" />
 </head>
 <body>
-    <h1 id="formHeader">Agregar Contacto</h1>
-    <form id="formAgregarContacto" runat="server">
+    <form id="form1" runat="server">
+        <h1 id="formHeader">Agregar Contacto</h1>
         <div class="form-input">
             <asp:Label Text="Nombre:" AssociatedControlID="txtNombre" runat="server" />
             <asp:TextBox ID="txtNombre" runat="server" />
@@ -31,6 +32,9 @@
                 runat="server" />
         </div>
         <asp:Button Text="Agregar" CssClass="btn-submit" OnClick="AgregarContacto_Click" runat="server" />
+
+        <h3 id="listHeader">Listado de Contactos</h3>
+        <asp:GridView ID="gvContactos" AutoGenerateColumns="true" CssClass="grid-view" runat="server" />
     </form>
 </body>
 </html>
